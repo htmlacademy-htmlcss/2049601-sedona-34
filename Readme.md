@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Елена Степанова](https://up.htmlacademy.ru/htmlcss/34/user/2049601).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Устинов] (https://htmlacademy.ru/profile/ustinov-dmitriy).
 
 ---
 
