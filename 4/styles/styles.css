@@ -31,6 +31,7 @@ body {
   color: #ffffff;
   background-color: #756157;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .button-second {
@@ -41,6 +42,7 @@ body {
   color: #ffffff;
   background-color: #82B3D3;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .button-selected {
@@ -51,9 +53,17 @@ body {
   color: #ffffff;
   background-color: #7DB54F;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /*Пагинация*/
+
+.pagination-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+}
+
 .pagination-current {
   color: #000000;
   background-color: #F2F2F2;
@@ -62,6 +72,7 @@ body {
 .pagination-link {
   text-decoration: none;
 }
+
 
 /*Поля форм*/
 input.field {
