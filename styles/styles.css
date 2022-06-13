@@ -20,6 +20,7 @@ html {
 
 body {
   font-family: "PT Sans", sans-serif;
+  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   margin: 0;
@@ -27,6 +28,16 @@ body {
   flex-direction: column;
   min-height: 100%;
 }
+
+/* Нужно ли так делать для стики-футер? обертка для содержимого body
+.body-container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+*/
 
 /*Кнопки*/
 
@@ -75,6 +86,10 @@ input.control-input {
 
 /*Header*/
 
+.page-header-logo {
+  display: block;
+}
+
 .page-header {
   display: flex;
   width: 1200px;
@@ -84,6 +99,9 @@ input.control-input {
 .header-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
@@ -105,14 +123,19 @@ input.control-input {
 
 
 .navigation-link {
+  display: block;
   font-weight: 700;
   font-size: 20px;
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
+  padding: 20px 17px;
 }
 
+
 .user-menu-link {
+  min-width: 42px;
+  min-height: 66px;
   font-weight: 700;
   font-size: 20px;
   color: #000000;
@@ -142,7 +165,7 @@ input.control-input {
 
 .main-image-welcome {
   display: block;
-  margin: 0 auto;
+  margin: 51px 371px 82px;
 }
 
 .main-image {
@@ -151,6 +174,7 @@ input.control-input {
   background-repeat: no-repeat;
 }
 
+/*Аdvantages*/
 .advantages {
   text-align: center;
 }
@@ -160,6 +184,7 @@ input.control-input {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .advantages-sedona-description {
@@ -167,11 +192,13 @@ input.control-input {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 63px 290px 31px;
 }
 
 .advantages-sedona-reasons {
   color: #333333;
   background-color: #ffffff;
+  margin: 0 273px 90px;
 }
 
 .advantages-title {
@@ -244,19 +271,26 @@ input.control-input {
 
 .hotel-search {
   text-align: center;
+  padding-bottom: 93px;
 }
-
 
 .hotel-search-question {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  padding: 0;
+  margin: 91px 451px 29px;
+
 }
 
 .hotel-search-description {
   color: #333333;
   background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  margin-left: 304px;
+  margin-right: 304px;
 }
 
 .hotel-search-link.button-basic {
@@ -264,6 +298,11 @@ input.control-input {
   font-size: 20px;
   line-height: 36px;
   text-decoration: none;
+  display: block;
+  width: 574px;
+  margin-top: 56px;
+  margin-left: 313px;
+  margin-right: 313px;
 }
 
 /*Футер*/
@@ -290,6 +329,16 @@ input.control-input {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  min-width: 404px;
+  margin: 94px 398px 29px;
+}
+
+.subscription-description {
+  min-width: 476px;
+  margin: 0;
+  padding: 0;
+  margin-left: 362px;
+  margin-right: 362px;
 }
 
 .button-newsletter {
@@ -297,19 +346,37 @@ input.control-input {
   line-height: 36px;
 }
 
+.newsletter-form {
+  width: 600px;
+  padding: 46px 200px 94px;
+}
+
 .footer-social {
-  width: 142px;
-  margin-left: 72px;
+  width: 116px;
+  margin: 49px 52px 54px 72px;
 }
 
 .footer-social-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-social-item {
+  margin-right: 26px;
+}
+
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .footer-phone {
   width: 720px;
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .contacts-phone {
@@ -322,8 +389,7 @@ input.control-input {
 
 .footer-link {
   width: 115px;
-  margin-right: 70px;
-  margin-left: 53px;
+  margin: 43px 72px 43px 53px;
 }
 
 /*каталог*/
@@ -336,18 +402,28 @@ input.control-input {
   background-color: #82B3D3;
   display: flex;
   flex-direction: column;
+  padding: 35px 70px 70px;
 }
 
 .inner-header-title {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.inner-header {
+  padding-bottom: 40px;
 }
 
 .breadcrumbs-list {
   font-size: 16px;
   line-height: 21px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
@@ -356,9 +432,9 @@ input.control-input {
 }
 
 .catalog-filter-container {
-width: 1060px;
-margin: 0 auto;
-display: flex;
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
 }
 
 .catalog-filter-title {
@@ -382,10 +458,10 @@ display: flex;
   text-align: center;
 }
 
-.catalog-sorting {
+.catalog-sorting-container {
   display: flex;
   width: 1056px;
-  margin: 0 auto;
+  margin: 50px 71px 56px;
 }
 
 .catalog-sorting-text {
@@ -394,6 +470,8 @@ display: flex;
   line-height: 36px;
   color: #000000;
   text-transform: uppercase;
+  margin: 0;
+  margin-right: 190px;
 }
 
 .select-control {
@@ -402,6 +480,15 @@ display: flex;
   line-height: 21px;
   color: #333333;
   background-color: #ffffff;
+}
+
+.button-view-container {
+  margin-left: 78px;
+}
+
+.button-view {
+  width: 48px;
+  height: 48px;
 }
 
 .catalog {
@@ -414,10 +501,11 @@ display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .hotel-card {
-width: 340px;
+  width: 340px;
 }
 
 .hotel-card-title {
@@ -445,12 +533,29 @@ width: 340px;
 }
 
 /*Пагинация*/
+.pagination {
+  display: flex;
+  width: 1056px;
+  margin: 96px 72px 25px;
+}
+
+.pagination-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-right: 270px;
+}
 
 .pagination-link {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
 }
 
 .pagination-current {
@@ -458,24 +563,23 @@ width: 340px;
   background-color: #F2F2F2;
 }
 
-.pagination {
-  display: flex;
-  width: 1056px;
-  margin: 0 auto;
-}
-
-.pagination-list {
-  margin: 0;
-  padding: 0;
-}
-
-.pagination-item {
-  width: 400px;
-  margin-right: 270px;
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .view-option {
-  width: 160px;
   margin-left: auto;
+  width: 160px;
 }
 
+/*Прячет скрыте элементы*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
