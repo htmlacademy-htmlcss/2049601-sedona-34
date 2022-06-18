@@ -10,47 +10,49 @@
 
   <body>
     <header class="page-header">
-      <a class="navigation-logo">
-        <img class="page-header-logo" src="images/header/navigation-logo.svg" width="139" height="70"
-          alt="Логотип города Седонa.">
-      </a>
-      <nav class="navigation">
-        <ul class="header-list navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-current">Главная</a>
+      <div class="page-header-container">
+        <a class="navigation-logo">
+          <img class="page-header-logo" src="images/header/navigation-logo.svg" width="139" height="70"
+            alt="Логотип города Седонa.">
+        </a>
+        <nav class="navigation">
+          <ul class="header-list navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link navigation-link-current">Главная</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">О Седоне</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="header-list user-menu-list">
+          <li class="user-menu-item">
+            <a class="user-menu-link" href="#">
+              <span class="visually-hidden">
+                Поиск
+              </span>
+            </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">О Седоне</a>
+          <li class="user-menu-item">
+            <a class="user-menu-link" href="#">
+              <span class="visually-hidden">
+                Избранное
+              </span>
+              <span class="visually-hidden score">
+                12
+              </span>
+            </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+          <li class="user-menu-item">
+            <a class="user-menu-link button button-basic" href="#">
+              Хочу сюда!
+            </a>
           </li>
         </ul>
-      </nav>
-      <ul class="header-list user-menu-list">
-        <li class="user-menu-item">
-          <a class="user-menu-link" href="#">
-            <span class="visually-hidden">
-              Поиск
-            </span>
-          </a>
-        </li>
-        <li class="user-menu-item">
-          <a class="user-menu-link" href="#">
-            <span class="visually-hidden">
-              Избранное
-            </span>
-            <span class="visually-hidden score">
-              12
-            </span>
-          </a>
-        </li>
-        <li class="user-menu-item">
-          <a class="user-menu-link button button-basic" href="#">
-            Хочу сюда!
-          </a>
-        </li>
-      </ul>
+      </div>
     </header>
 
     <main class="main-container main-index">
