@@ -30,7 +30,17 @@ body {
   min-height: 100%;
 }
 
+
 /*Кнопки*/
+
+.button {
+  border: none;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
 .button-basic {
   font-weight: 700;
@@ -40,7 +50,19 @@ body {
   color: #ffffff;
   background-color: #756157;
   text-transform: uppercase;
-  cursor: pointer;
+}
+
+.button-basic:hover {
+  background-color: #615048;
+}
+
+.button-basic:focus {
+  background-color: #615048;
+}
+
+.button-basic:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-second {
@@ -51,8 +73,19 @@ body {
   color: #ffffff;
   background-color: #82B3D3;
   text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 2px;
+}
+
+.button-second:not(.pagination-current):hover {
+  background-color: #68A2CA;
+}
+
+.button-second:not(.pagination-current):focus {
+  background-color: #68A2CA;
+}
+
+.button-second:not(.pagination-current):active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-selected {
@@ -63,9 +96,20 @@ body {
   color: #ffffff;
   background-color: #7DB54F;
   text-transform: uppercase;
-  cursor: pointer;
 }
 
+.button-selected:hover {
+  background-color: #6C9E42;
+}
+
+.button-selected:focus {
+  background-color: #6C9E42;
+}
+
+.button-selected:active {
+  background-color: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
 
 /*Поля форм*/
 input.field {
@@ -119,6 +163,21 @@ input.control-input {
   padding: 20px 17px;
 }
 
+.navigation-item-current {
+  position: relative;
+}
+
+.navigation-item-current::after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid #756257;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  right: 0;
+  z-index: 2;
+}
+
 .user-menu-list {
   width: 264px;
   margin-left: auto;
@@ -130,14 +189,40 @@ input.control-input {
   flex-wrap: wrap;
 }
 
+.user-menu-item:nth-child(2) {
+  margin-right: 19px;
+}
+
 .user-menu-link {
   min-width: 42px;
-  min-height: 66px;
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.user-menu-link-heart::after {
+  content: "12";
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 0;
+  text-align: center;
+  color: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  position: absolute;
+  left: 55%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .user-menu-link.button-basic {
@@ -145,6 +230,18 @@ input.control-input {
   line-height: 20px;
   color: #ffffff;
   background-color: #756157;
+  padding: 9px 15px 8px;
+  width: 160px;
+  align-self: center;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .main-container {
@@ -169,10 +266,21 @@ input.control-input {
   background-size: 100% auto;
   background-repeat: no-repeat;
   padding: 51px 371px 82px;
-  ;
+  position: relative;
+  display: block;
 }
 
-/*Аdvantages*/
+.main-image::after {
+  content: url(../images/index/index-background-cut.png);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateY(428px);
+}
+
+/*Преимущества*/
 
 .advantages-reasons-container {
   padding: 63px 273px 90px;
@@ -209,24 +317,56 @@ input.control-input {
 .advantages-city {
   grid-column: 1/2;
   padding: 92px 85px;
+  position: relative;
+}
+
+.advantages-city::after {
+  content: url("../images/index/advantages-photo-1.jpg");
+  width: 800px;
+  height: 384px;
+  position: absolute;
+  left: 100%;
+  top: 0;
 }
 
 .advantages-house {
   grid-column: 1/2;
-  padding: 80px 85px;
+  padding: 185px 85px 80px;
+  background-image: url("../images/index/advantages-housing.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center 80px;
 }
 
 .advantages-food {
-  padding: 80px 85px 81px;
+  padding: 185px 85px 80px;
+  background-image: url("../images/index/advantages-eating.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center 80px;
 }
 
 .advantages-souvenirs {
-  padding: 80px 85px;
+  padding: 185px 85px 80px;
+  background-image: url("../images/index/advantages-souvenir.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center 80px;
 }
 
 .advantages-bridge {
   grid-column: 3/4;
   padding: 92px 85px;
+  position: relative;
+}
+
+.advantages-bridge::before {
+  content: url("../images/index/advantages-photo-2.jpg");
+  width: 800px;
+  height: 384px;
+  position: absolute;
+  right: 100%;
+  top: 0;
 }
 
 .advantages-area {
@@ -267,6 +407,7 @@ input.control-input {
 .number {
   font-size: 18px;
   line-height: 21px;
+  display: block;
 }
 
 .number-first {
@@ -289,24 +430,6 @@ input.control-input {
 .advantages-item-third {
   background-color: rgba(131, 179, 211, 0.2);
 }
-
-/* фото для преимуществ
-.advantages-image-first {
-  background-image: url("../images/index/advantages-photo-1.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  width: 800px;
-  height: 384px;
-}
-
-.advantages-image-second {
-  background-image: url("../images/index/advantages-photo-2.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  width: 800px;
-  height: 384px;
-}
-*/
 
 /*Блок с поиском отеля*/
 
@@ -338,6 +461,8 @@ input.control-input {
   display: block;
   width: 574px;
   margin-top: 56px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Футер*/
@@ -351,7 +476,7 @@ input.control-input {
 
 /*Блок с подпиской*/
 
-.footer-subscription {
+.footer-index-subscription {
   background-image: url("../images/footer/footer-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -359,7 +484,11 @@ input.control-input {
   color: #ffffff;
   background-color: #82B3D3;
   width: 1200px;
+}
 
+.footer-catalog-subscription {
+  text-align: center;
+  width: 1200px;
 }
 
 .footer-subscription-container {
@@ -376,8 +505,11 @@ input.control-input {
 }
 
 .subscription-description {
-  min-width: 476px;
   margin: 0;
+}
+
+.subscription-description-catalog {
+  color: #333333;
 }
 
 .button-newsletter {
@@ -416,9 +548,29 @@ input.control-input {
 .footer-social-item {
   width: 47px;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+}
+
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83B3D3;
+}
+
+.social-link:hover .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:focus .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .footer-phone {
@@ -437,8 +589,41 @@ input.control-input {
   padding-bottom: 5px;
 }
 
-.footer-link {
+.contacts-phone:hover {
+  color: #756157;
+}
+
+.contacts-phone:focus {
+  color: #756157;
+}
+
+.contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.footer-htmlacademy-link {
   margin-left: 43px;
+  position: relative;
+}
+
+.htmlacademy-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.footer-htmlacademy-link:hover .htmlacademy-icon {
+  fill: #756157;
+}
+
+.footer-htmlacademy-link:focus .htmlacademy-icon {
+  fill: #756157;
+}
+
+.footer-htmlacademy-link:active .htmlacademy-icon {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /*каталог*/
@@ -473,6 +658,7 @@ input.control-input {
   line-height: 21px;
   margin: 0;
   padding: 0;
+  margin-top: 10px;
   display: flex;
   list-style-type: none;
   min-width: 110px;
@@ -482,6 +668,7 @@ input.control-input {
   display: flex;
   min-width: 12px;
   min-height: 12px;
+  position: relative;
 }
 
 .breadcrumbs-item:not(:last-child) {
@@ -493,22 +680,95 @@ input.control-input {
   text-decoration: none;
 }
 
+.breadcrumbs-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #FFFFFF;
+}
+
+.breadcrumbs-icon-house:hover {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-text:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-icon-house:focus {
+  fill: #FFFFFF;
+}
+
+.breadcrumbs-text:focus {
+  color: #FFFFFF;
+}
+
+.breadcrumbs-icon-house:active {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-text:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /*Список фильтров для гостиниц*/
 
 .catalog-filter-container {
   width: 1060px;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.catalog-filter-first-element {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  column-gap: 70px;
+}
+
+.catalog-filter-second-element {
+  display: grid;
+  grid-template-columns: 288px 160px;
+  column-gap: 70px;
+}
+
+.catalog-filter-buttons {
+  display: flex;
+  width: 160px;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 }
 
 .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
+  margin-bottom: 30px;
 }
 
 .catalog-filter-list {
   font-size: 18px;
   line-height: 21px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.catalog-filter-item:last-child {
+  margin-bottom: 0;
 }
 
 .control-price {
@@ -520,6 +780,10 @@ input.control-input {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  color: #FFFFFF;
+  background-color: rgba(28, 28, 28, 0);
+  border: none;
+  margin-top: 20px;
 }
 
 /*Сортировка*/
@@ -550,16 +814,56 @@ input.control-input {
   background-color: #ffffff;
 }
 
+.select-control-sorting {
+  width: 290px;
+}
+
 .button-view-container {
   display: flex;
   width: 160px;
-  margin-left: 78px;
+  margin-left: auto;
   justify-content: space-between;
 }
 
 .button-view {
   width: 48px;
   height: 48px;
+  position: relative;
+}
+
+.button-view-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.button-view-current {
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.button-view-uncurrent {
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+
+.button-view:hover {
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.button-view:focus {
+  border: 2px solid #68A2CA;
+  border-radius: 4px;
+}
+
+.button-view:active {
+  border: 2px solid #000000;
+  border-radius: 4px;
 }
 
 /*карточки товаров*/
@@ -619,10 +923,25 @@ input.control-input {
   text-decoration: none;
 }
 
-.product-rating-stars {
-  width: 90px;
-  height: 17px;
+.product-rating-stars-four {
+  width: 85px;
   background-image: url("../images/catalog/star.svg");
+  background-repeat: space no-repeat;
+  background-position: center;
+}
+
+.product-rating-stars-three {
+  width: 65px;
+  background-image: url("../images/catalog/star.svg");
+  background-repeat: space no-repeat;
+  background-position: center;
+}
+
+.product-rating-stars-two {
+  width: 40px;
+  background-image: url("../images/catalog/star.svg");
+  background-repeat: space no-repeat;
+  background-position: center;
 }
 
 /*Пагинация*/
@@ -651,6 +970,7 @@ input.control-input {
   width: 60px;
   height: 60px;
   padding: 11px 21px;
+  border-radius: 5px;
 }
 
 .pagination-current {
