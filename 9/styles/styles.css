@@ -889,7 +889,7 @@ body {
   top: -2px;
 }
 
-/*Оформление состояний чекбокса*/
+/*Оформление состояний радиокнопок и чекбокса*/
 
 .control:hover .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
@@ -920,14 +920,6 @@ body {
   border-radius: 50%;
   top: 5px;
   left: 5px;
-}
-
-/*Оформление состояний радио-кнопок*/
-
-.control-input[type="radio"]:hover+.control-mark,
-.control-input[type="radio"]:focus+.control-mark,
-.control-input[type="radio"]:active+.control-mark {
-  background-color: #FFFFFF;
 }
 
 .range-price-container {
@@ -1391,11 +1383,11 @@ body {
   z-index: 3;
 }
 
-/*
+
 .modal-container-close {
   display: none;
 }
-*/
+
 
 .modal {
   position: relative;
