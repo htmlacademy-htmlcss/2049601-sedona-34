@@ -1472,7 +1472,7 @@ body {
   line-height: 21px;
   margin: 0;
   grid-column: 2/3;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .modal-date-text-false {
@@ -1576,7 +1576,7 @@ body {
 }
 
 .label-children {
-  padding-right: 43px;
+  padding-right: 48px;
   position: relative;
 }
 
@@ -1695,7 +1695,7 @@ body {
   border-radius: 10px;
   position: absolute;
   top: 40px;
-  right: -115px;
+  right: -117px;
  display: none;
 }
 
