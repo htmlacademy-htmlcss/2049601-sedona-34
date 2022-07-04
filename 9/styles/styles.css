@@ -1472,7 +1472,7 @@ body {
   line-height: 21px;
   margin: 0;
   grid-column: 2/3;
-  margin-top: 8px;
+  margin-top: 11px;
 }
 
 .modal-date-text-false {
@@ -1488,7 +1488,7 @@ body {
 }
 
 .modal-field-date {
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 
@@ -1540,11 +1540,11 @@ body {
 }
 
 .minus {
-  left: 19px;
+  left: 14px;
 }
 
 .plus {
-  right: 19px;
+  right: 14px;
 }
 
 .minus::before {
