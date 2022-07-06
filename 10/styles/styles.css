@@ -688,6 +688,10 @@ body {
   outline: none;
 }
 
+.social-link:focus  {
+  outline: none;
+}
+
 .social-link:focus .social-icon {
   fill: #68A2CA;
 }
@@ -695,6 +699,7 @@ body {
 .social-link:active .social-icon {
   fill: rgba(104, 162, 202, 0.3);
 }
+
 
 .footer-phone {
   width: 720px;
@@ -743,6 +748,10 @@ body {
 
 .footer-htmlacademy-link:hover .htmlacademy-icon {
   fill: #756157;
+}
+
+.contacts-link:focus {
+  outline: none;
 }
 
 .footer-htmlacademy-link:focus .htmlacademy-icon {
