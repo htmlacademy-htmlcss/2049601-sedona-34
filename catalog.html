@@ -5,16 +5,18 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
 
   <body>
+    <!-- Header -->
     <header class="page-header">
       <div class="page-header-container">
         <a class="navigation-logo" href="index.html">
           <img class="page-header-logo" src="images/header/navigation-logo.svg" width="139" height="70"
             alt="Логотип города Седонa.">
         </a>
+        <!-- Навигация -->
         <nav class="navigation">
           <ul class="header-list navigation-list">
             <li class="navigation-item">
@@ -28,6 +30,7 @@
             </li>
           </ul>
         </nav>
+        <!-- Пользовательское меню -->
         <ul class="header-list user-menu-list">
           <li class="user-menu-item">
             <a class="user-menu-link" href="#">
@@ -66,6 +69,7 @@
         </ul>
       </div>
     </header>
+    <!-- Main -->
     <main class="main-container main-inner">
       <div class="page-container">
         <div class="filter-container">
@@ -88,7 +92,7 @@
               </li>
               <li class="breadcrumbs-item">
                 <span class="visually-hidden">
-                  Стрелка
+                  Указание на текущую страницу
                 </span>
                 <svg class="breadcrumbs-icon" aria-hidden="true" focusable="false" width="6" height="9"
                   viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -103,6 +107,7 @@
               </li>
             </ol>
           </header>
+          <!-- Список фильтров -->
           <section class="catalog-hotel">
             <h2 class="visually-hidden">
               Список фильтров для гостиниц
@@ -175,6 +180,7 @@
                   <legend class="catalog-filter-title title-range">
                     Стоимость, Р:
                   </legend>
+                  <!-- Поля для ввода цен -->
                   <div class="range-price-container">
                     <div class="cost-field">
                       <label for="cost-min" class="range-price">от</label>
@@ -185,6 +191,7 @@
                       <input class="range-input range-input-right" type="number" id="cost-max" name="cost" value="9000">
                     </div>
                   </div>
+                  <!-- Рендж-слайдер -->
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; width: 227px">
                       <button class="range-toggle toggle-min">
@@ -209,6 +216,7 @@
           </section>
         </div>
         <section class="catalog-sorting">
+          <!-- Сортировка -->
           <div class="catalog-sorting-container">
             <h2 class="sorting-title visually-hidden">
               Сортировка
@@ -218,7 +226,7 @@
             </p>
             <div class="select select-sorting-type">
               <select class="select-control" aria-label="Сортировка">
-                <option value="cheap">Сначала дешёвое</option>
+                <option value="cheap">Сначала дешёвые</option>
                 <option value="popular">Сначала популярное</option>
                 <option value="expensive">Сначала дорогое</option>
               </select>
@@ -267,6 +275,7 @@
             </div>
           </div>
         </section>
+        <!-- Список товаров -->
         <section class="catalog">
           <h2 class="catalog-title visually-hidden">
             Каталог
@@ -279,7 +288,7 @@
                 Amara Resort & Spa
               </h3>
               <p class="hotel-card-text">Гостиница</p>
-              <p class="hotel-card-text hotel-card-price">от 4000 ₽</p>
+              <p class="hotel-card-text hotel-card-price">От 4000 ₽</p>
               <a href="#" class="button button-basic hotel-description-link hotel-card-button">
                 Подробнее
               </a>
@@ -298,7 +307,7 @@
                 Villas at Poco Diablo
               </h3>
               <p class="hotel-card-text">Гостиница</p>
-              <p class="hotel-card-text hotel-card-price">от 5000 ₽</p>
+              <p class="hotel-card-text hotel-card-price">От 5000 ₽</p>
               <a href="#" class="button button-basic hotel-description-link">
                 Подробнее
               </a>
@@ -317,7 +326,7 @@
                 Desert Quail Inn
               </h3>
               <p class="hotel-card-text">Гостиница</p>
-              <p class="hotel-card-text hotel-card-price">от 2500 ₽</p>
+              <p class="hotel-card-text hotel-card-price">От 2500 ₽</p>
               <a href="#" class="button button-basic hotel-description-link">
                 Подробнее
               </a>
@@ -336,7 +345,7 @@
                 GreenTree Inn
               </h3>
               <p class="hotel-card-text">Гостиница</p>
-              <p class="hotel-card-price hotel-card-text">от 4000 ₽</p>
+              <p class="hotel-card-price hotel-card-text">От 1500 ₽</p>
               <a href="#" class="button button-basic hotel-description-link">
                 Подробнее
               </a>
@@ -350,6 +359,7 @@
             </li>
           </ul>
         </section>
+        <!-- Пагинация -->
         <section class="pagination">
           <h2 class="visually-hidden">
             Номера страниц
@@ -386,8 +396,10 @@
         </section>
       </div>
     </main>
+    <!-- Footer -->
     <footer class="page-footer">
       <div class="page-footer-container">
+        <!-- Подписка -->
         <section class="footer-catalog-subscription">
           <div class="footer-subscription-container">
             <h2 class="subscription-title">
@@ -409,6 +421,7 @@
             </form>
           </div>
         </section>
+        <!-- Контакты -->
         <div class="contacts-container">
           <section class="footer-social">
             <h2 class="visually-hidden">
