@@ -1039,6 +1039,7 @@ img {
   border: none;
   padding: 3px 13px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 /*Оформление состояний Reset*/
@@ -1358,16 +1359,14 @@ img {
   display: flex;
   width: 1056px;
   padding: 96px 72px 15px;
+  justify-content: space-between;
 }
 
 .pagination-list {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 410px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-right: 270px;
 }
 
 .pagination-link {
@@ -1396,6 +1395,12 @@ img {
   margin-right: 8px;
 }
 
+.pagination-select {
+  display: flex;
+  width: 386px;
+  justify-content: space-between;
+}
+
 .view-option-text {
   font-size: 18px;
   line-height: 21px;
@@ -1405,7 +1410,6 @@ img {
 }
 
 .select-view-option {
-  margin-left: auto;
   width: 160px;
 }
 
